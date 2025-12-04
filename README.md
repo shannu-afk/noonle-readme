@@ -85,8 +85,7 @@ Create a `.env` file in the `server/` directory with the following variables:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
-EMAIL_USER=your_gmail_address@gmail.com
-EMAIL_PASS=your_gmail_app_password
+Send_Grid_API=*************
 JWT_SECRET=your_jwt_secret
 NODE_ENV=production
 PORT=5000
@@ -97,14 +96,20 @@ FRONTEND_URL=https://your-frontend-url.vercel.app
 
 The application uses Gmail SMTP for OTP email delivery. To set up:
 
-1. Enable 2-Factor Authentication on your Gmail account
-2. Generate an App Password:
-   - Go to Google Account settings → Security → 2-Step Verification → App passwords
-   - Generate a new app password for "Mail"
-   - Use this 16-character password as `EMAIL_PASS`
-3. Set `EMAIL_USER` to your Gmail address and `EMAIL_PASS` to the app password
+1. Create a SendGrid Account
 
-For development, if `EMAIL_USER` or `EMAIL_PASS` is not set, OTP codes will be logged to the console.
+If you don’t have one, sign up at the SendGrid website.
+
+2. Generate an API Key
+
+Go to SendGrid Dashboard → Settings → API Keys
+
+Click Create API Key
+
+Choose Full Access or at least Mail Send permission
+
+Copy the generated API key
+
 
 ## Render Deployment
 
@@ -115,6 +120,20 @@ The backend is configured for Render deployment with the following settings in `
 - **Build Command:** `npm run build`
 - **Start Command:** `npm start`
 - **Environment Variables:** `NODE_ENV`, `PORT`, `MONGO_URI`, `SENDGRID_API_KEY`
+🌐 Frontend Deployment (Vercel)
+
+## vercel Deployment
+The frontend is deployed on Vercel with the following configuration:
+
+Platform: Vercel
+
+Framework: React (Create React App) (adjust if using Next.js)
+
+Install Command: npm install
+
+Build Command: npm run build
+
+Output Directory: build
 
 # 👤 Credits
 
@@ -122,5 +141,6 @@ Created by Kodali Shanmukh Chowdary as a real-time communication project with ME
 
 # Note: Kindly check the spam mail for OTP to sign up.
 
+# 👤 Contact 
 
-📩 Email: kodalishanmukh6thfinger@gmail.com
+📩 Email: kodalishanmukh03@gmail.com
