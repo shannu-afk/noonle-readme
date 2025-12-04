@@ -137,7 +137,7 @@ Output Directory: build
 
 # 👤 Credits
 
-Created by Kodali Shanmukh Chowdary as a real-time communication project with MERN + WebRTC + Socket.IO integration.
+Created by  Shanmukh  as a real-time communication project with MERN + WebRTC + Socket.IO integration.
 
 # Note: Kindly check the spam mail for OTP to sign up.
 
